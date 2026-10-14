@@ -1,36 +1,84 @@
-<?php include ('header.php'); ?>
+<?php 
+// Page SEO Metadata Variables
+$page_title = "Professional Fee Tariffs & Free Consultations | VPDL";
+$page_desc  = "Transparent UK professional fee tariffs for town planning (PDM), structural engineering (SDM), party wall surveys (BSM), and free initial consultations.";
+include ('header.php'); 
+?>
+
+  <!-- Schema.org JSON-LD Structured Data: Service + BreadcrumbList -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@graph": [
+      {
+        "@type": "Service",
+        "@id": "https://vpdl.co.uk/fees.php#service",
+        "name": "VPDL Professional Fee Tariffs & Free Consultations",
+        "serviceType": "Architectural & Engineering Fee Structuring",
+        "provider": {
+          "@type": "ProfessionalService",
+          "name": "Volume Planning & Developments Ltd",
+          "telephone": "+443333445807",
+          "email": "vpdl.uk@gmail.com",
+          "address": {
+            "@type": "PostalAddress",
+            "streetAddress": "ESL Office 256B, 182-184 High Street North",
+            "addressLocality": "London",
+            "postalCode": "E6 2JA",
+            "addressCountry": "GB"
+          }
+        },
+        "description": "Transparent UK fee benchmarks and complimentary initial consultations for planning, structural engineering, and project management."
+      },
+      {
+        "@type": "BreadcrumbList",
+        "@id": "https://vpdl.co.uk/fees.php#breadcrumb",
+        "itemListElement": [
+          { "@type": "ListItem", "position": 1, "name": "Home", "item": "https://vpdl.co.uk/index.php" },
+          { "@type": "ListItem", "position": 2, "name": "Tariffs & Free Consultations", "item": "https://vpdl.co.uk/fees.php" }
+        ]
+      }
+    ]
+  }
+  </script>
 
   <!-- =========================================================
        FEES & TARIFF STRUCTURE - VOLUME PLANNING & DEVELOPMENTS LTD
        ========================================================= -->
-  <main>
-    <!-- Glassmorphic Breadcrumb Trail -->
-    <div class="breadcrumb-section">
-      <div class="container">
-        <nav class="breadcrumb-glass" aria-label="Breadcrumb">
-          <a href="index.php">
-            <svg viewBox="0 0 24 24" width="14" height="14" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M3 9l9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"></path><polyline points="9 22 9 12 15 12 15 22"></polyline></svg>
-            Home
-          </a>
-          <span class="separator" aria-hidden="true">/</span>
-          <span class="current" aria-current="page">Tariffs &amp; Fees</span>
-        </nav>
+  <main class="fees-page-wrapper">
+
+    <!-- Top Light Backdrop: Brand Tint + Architectural Grid -->
+    <div class="fees-top-backdrop">
+      <!-- Centered Glassmorphic Breadcrumb Trail -->
+      <div class="breadcrumb-section">
+        <div class="container breadcrumb-container">
+          <nav class="breadcrumb-glass" aria-label="Breadcrumb">
+            <a href="index.php">
+              <svg viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                <path d="M3 9l9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"></path>
+                <polyline points="9 22 9 12 15 12 15 22"></polyline>
+              </svg>
+              Home
+            </a>
+            <span class="separator" aria-hidden="true">/</span>
+            <span class="current" aria-current="page">Tariffs &amp; Fees</span>
+          </nav>
+        </div>
       </div>
+
+      <!-- Centered Hero Header -->
+      <section class="fees-hero centered-hero">
+        <div class="container hero-container" data-reveal>
+          <h1>TRANSPARENT PRICING.<br><span class="highlight-brand">ZERO HIDDEN CONSULTATION FEES.</span></h1>
+          <p class="fees-hero-lead">
+            While typical market consultancies charge up to £150 for an initial meeting, VPDL provides early planning and feasibility consultations free of charge. Explore our structured fee schedules across planning, structural engineering, building surveying, and property management.
+          </p>
+        </div>
+      </section>
     </div>
 
-    <!-- Hero Header -->
-    <section class="fees-hero">
-      <div class="container" data-reveal>
-        <div class="mono-tag">Commercial Schedule &amp; Tariff Guide</div>
-        <h1>TRANSPARENT PRICING.<br><span>ZERO HIDDEN CONSULTATION FEES.</span></h1>
-        <p class="fees-hero-lead">
-          While typical market consultancies charge up to £150 for an initial meeting, VPDL provides early planning and feasibility consultations free of charge. Explore our structured fee schedules across planning, structural engineering, building surveying, and property management.
-        </p>
-      </div>
-    </section>
-
     <!-- Consultation Comparison Banner -->
-    <section class="container" style="padding-bottom: 50px;">
+    <section class="container" style="padding-top: 50px; padding-bottom: 50px;">
       <div class="consultation-highlight-box" data-reveal>
         <div class="highlight-left">
           <div class="pill-badge">The VPDL Advantage</div>
@@ -48,9 +96,9 @@
               <strong>£0 · Free</strong>
             </div>
           </div>
-          <a class="btn-core btn-core-light" href="consultation.php">
+          <a class="btn-brand-submit" href="consultation.php" style="width: 100%; justify-content: center;">
             <span>Book Free Session</span>
-            <i aria-hidden="true">↗</i>
+            <svg viewBox="0 0 24 24" width="14" height="14" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><line x1="7" y1="17" x2="17" y2="7"></line><polyline points="7 7 17 7 17 17"></polyline></svg>
           </a>
         </div>
       </div>
@@ -59,9 +107,9 @@
     <!-- Core Fee Schedules Matrix -->
     <section class="container" style="padding-bottom: 60px;">
       <div class="section-title-wrap" data-reveal>
-        <div class="mono-tag">Service Fee Schedules</div>
-        <h2>INDICATIVE TARIFFS BY DISCIPLINE</h2>
-        <p>Fixed and stage-gated transparent pricing tailored to domestic extensions, multi-unit schemes, and commercial developments.</p>
+        <div class="mono-tag" style="margin-bottom: 12px;">Service Fee Schedules</div>
+        <h2 style="font-size: 28px; font-weight: 800; color: var(--vpdl-black); margin: 0 0 6px;">INDICATIVE TARIFFS BY DISCIPLINE</h2>
+        <p style="color: var(--vpdl-muted); font-size: 14px; margin: 0;">Fixed and stage-gated transparent pricing tailored to domestic extensions, multi-unit schemes, and commercial developments.</p>
       </div>
 
       <div class="fee-cards-grid" data-reveal>
@@ -69,7 +117,7 @@
         <!-- Tariff Card 01: Planning Design Management (PDM) -->
         <div class="fee-card">
           <div class="fee-card-top">
-            <span class="discipline-tag">PDM Discipline</span>
+            <span class="discipline-tag tag-red">PDM Discipline</span>
             <h3>Planning &amp; Design Management</h3>
             <p>From initial concept through to formal local authority planning application submissions.</p>
           </div>
@@ -91,7 +139,7 @@
         <div class="fee-card highlighted-fee-card">
           <div class="highlight-corner-badge">Most Popular</div>
           <div class="fee-card-top">
-            <span class="discipline-tag">SDM Discipline</span>
+            <span class="discipline-tag tag-blue">SDM Discipline</span>
             <h3>Structural Calculations (SDM)</h3>
             <p>Comprehensive steel, timber, and foundation calculations approved for UK Building Control.</p>
           </div>
@@ -112,7 +160,7 @@
         <!-- Tariff Card 03: Architectural & 3D Visual Modeling -->
         <div class="fee-card">
           <div class="fee-card-top">
-            <span class="discipline-tag">RIBA Stages 1–4</span>
+            <span class="discipline-tag tag-purple">RIBA Stages 1–4</span>
             <h3>Architectural &amp; 3D Modeling</h3>
             <p>High-definition spatial layout plans, building extensions, and photorealistic 3D visualisations.</p>
           </div>
@@ -133,7 +181,7 @@
         <!-- Tariff Card 04: Building Survey Management (BSM) & Party Wall -->
         <div class="fee-card">
           <div class="fee-card-top">
-            <span class="discipline-tag">BSM Discipline</span>
+            <span class="discipline-tag tag-blue">BSM Discipline</span>
             <h3>Building Surveys &amp; Party Wall</h3>
             <p>Statutory boundary surveys, condition schedules, and Party Wall etc. Act 1996 dispute resolutions.</p>
           </div>
@@ -154,7 +202,7 @@
         <!-- Tariff Card 05: Project & Property Management (PMC / IPM) -->
         <div class="fee-card">
           <div class="fee-card-top">
-            <span class="discipline-tag">PMC / IPM</span>
+            <span class="discipline-tag tag-purple">PMC / IPM</span>
             <h3>Project &amp; Property Management</h3>
             <p>Contract administration, contractor vetting, site oversight, and ongoing lettings management.</p>
           </div>
@@ -175,7 +223,7 @@
         <!-- Tariff Card 06: Buy-to-Let Yield Sourcing & Development Consulting -->
         <div class="fee-card">
           <div class="fee-card-top">
-            <span class="discipline-tag">Investment Advisory</span>
+            <span class="discipline-tag tag-red">Investment Advisory</span>
             <h3>Buy-to-Let &amp; Development Advisory</h3>
             <p>End-to-end investment sourcing, conversion appraisal, and asset value maximisation across high-yield UK regions.</p>
           </div>
@@ -190,7 +238,7 @@
             <li>Turnkey refurbishment &amp; structural value uplift oversight</li>
             <li>Access to strategic 50% project share partnerships</li>
           </ul>
-          <a href="property-investment.php" class="fee-action-link">Explore Investment Advisory →</a>
+          <a href="projects.php" class="fee-action-link">Explore Investment Advisory →</a>
         </div>
 
       </div>
@@ -200,7 +248,7 @@
     <section class="container" style="padding-bottom: 90px;">
       <div class="partner-revenue-box" data-reveal>
         <div class="partner-box-content">
-          <div class="mono-tag" style="background: rgba(245, 158, 11, 0.15); color: #f59e0b; border: 1px solid rgba(245, 158, 11, 0.3);">Strategic Partner Programme</div>
+          <div class="mono-tag" style="background: rgba(245, 158, 11, 0.1); color: #d97706; border-color: rgba(245, 158, 11, 0.25);">Strategic Partner Programme</div>
           <h2>EARN UP TO 50% COMMISSION OR PROJECT SHARES</h2>
           <p>Are you an estate agent, mortgage broker, contractor, or commercial intermediary? Refer your clients to VPDL's planning, engineering, and development services to generate recurring monthly returns or share equity on major schemes.</p>
           <div class="partner-metrics">
@@ -219,7 +267,7 @@
           </div>
         </div>
         <div class="partner-box-action">
-          <a class="btn-core btn-core-dark" href="partner.php">
+          <a class="btn-brand-submit" href="consultation.php">
             <span>Join Partner Programme</span>
             <i aria-hidden="true">↗</i>
           </a>
@@ -230,8 +278,8 @@
     <!-- Tariff FAQ Section -->
     <section class="container" style="padding-bottom: 100px;">
       <div class="section-title-wrap" data-reveal>
-        <div class="mono-tag">Frequently Asked Questions</div>
-        <h2>TARIFF &amp; BILLING CLARITY</h2>
+        <div class="mono-tag" style="margin-bottom: 12px;">Frequently Asked Questions</div>
+        <h2 style="font-size: 26px; font-weight: 800; color: var(--vpdl-black); margin: 0;">TARIFF &amp; BILLING CLARITY</h2>
       </div>
 
       <div class="faq-accordion-list" data-reveal>
@@ -266,23 +314,140 @@
     </section>
   </main>
 
-  <!-- Component Styles -->
+  <!-- Component Styles Aligned with VPDL Brand Palette -->
   <style>
-    .fees-hero {
-      padding: 60px 0 40px;
+    :root {
+      --vpdl-red: #E11D2A;         /* 'V' & Center Roofline Accent */
+      --vpdl-purple: #E11D2A;      /* Main Arch Roofline */
+      --vpdl-blue: #4F83B7;        /* Outer Accent Roofline */
+      --vpdl-black: #111827;       /* Core 'PDL' Typography */
+      --vpdl-muted: #64748B;
+      --vpdl-border: #E2E8F0;
+      --vpdl-surface: #FFFFFF;
+      --vpdl-bg-canvas: #F8FAFC;
+    }
+
+    .fees-page-wrapper {
+      background: var(--vpdl-bg-canvas);
+      color: var(--vpdl-black);
+      position: relative;
+      overflow-x: hidden;
+    }
+
+    /* Top Light Backdrop: Brand Tint + Architectural Grid */
+    .fees-top-backdrop {
+      position: relative;
+      padding-top: 28px;
+      padding-bottom: 40px;
+      background: 
+        radial-gradient(circle at 45% -10%, rgba(225, 29, 42, 0.08) 0%, transparent 50%),
+        radial-gradient(circle at 75% 20%, rgba(107, 91, 149, 0.08) 0%, transparent 45%),
+        linear-gradient(to bottom, #ffffff 0%, #f8fafc 100%);
+      border-bottom: 1px solid var(--vpdl-border);
+    }
+
+    .fees-top-backdrop::before {
+      content: "";
+      position: absolute;
+      inset: 0;
+      background-image: 
+        linear-gradient(rgba(17, 24, 39, 0.035) 1px, transparent 1px),
+        linear-gradient(90deg, rgba(17, 24, 39, 0.035) 1px, transparent 1px);
+      background-size: 34px 34px;
+      mask-image: radial-gradient(ellipse at 50% 30%, black 40%, transparent 80%);
+      -webkit-mask-image: radial-gradient(ellipse at 50% 30%, black 40%, transparent 80%);
+      pointer-events: none;
+    }
+
+    /* Centered Breadcrumbs */
+    .breadcrumb-container {
+      display: flex;
+      justify-content: center;
+      position: relative;
+      z-index: 2;
+    }
+    .breadcrumb-glass {
+      background: rgba(255, 255, 255, 0.88) !important;
+      backdrop-filter: blur(12px) !important;
+      -webkit-backdrop-filter: blur(12px) !important;
+      border: 1px solid rgba(226, 232, 240, 0.9) !important;
+      box-shadow: 0 4px 15px rgba(0, 0, 0, 0.03) !important;
+      border-radius: 9999px;
+      padding: 8px 20px;
+      display: inline-flex;
+      align-items: center;
+      gap: 10px;
+      font-size: 13px;
+    }
+    .breadcrumb-glass a {
+      color: var(--vpdl-muted);
+      text-decoration: none;
+      display: inline-flex;
+      align-items: center;
+      gap: 6px;
+      transition: color 0.15s ease;
+      font-weight: 500;
+    }
+    .breadcrumb-glass a:hover {
+      color: var(--vpdl-red);
+    }
+    .breadcrumb-glass .separator {
+      color: #cbd5e1;
+    }
+    .breadcrumb-glass .current {
+      color: var(--vpdl-black);
+      font-weight: 700;
+    }
+
+    /* Centered Hero Header */
+    .centered-hero {
+      text-align: center;
+      position: relative;
+      z-index: 2;
+      padding: 34px 0 10px;
+    }
+    .hero-container {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      text-align: center;
+    }
+    .mono-tag {
+      margin: 0 auto 16px auto;
+      background: rgba(225, 29, 42, 0.08);
+      border: 1px solid rgba(225, 29, 42, 0.25);
+      color: var(--vpdl-red);
+      font-size: 11px;
+      letter-spacing: 0.12em;
+      text-transform: uppercase;
+      padding: 5px 14px;
+      border-radius: 4px;
+      font-weight: 700;
+      display: inline-block;
+    }
+    .centered-hero h1 {
+      font-size: clamp(32px, 4vw, 46px);
+      font-weight: 800;
+      color: var(--vpdl-black);
+      margin: 0 0 16px 0;
+      letter-spacing: -0.02em;
+      line-height: 1.15;
+    }
+    .centered-hero h1 .highlight-brand {
+      color: var(--vpdl-purple);
     }
     .fees-hero-lead {
-      color: var(--text-muted);
+      color: var(--vpdl-muted);
       font-size: 16px;
       max-width: 680px;
-      margin-top: 14px;
-      line-height: 1.7;
+      margin: 0 auto;
+      line-height: 1.75;
     }
     
     /* Consultation Banner */
     .consultation-highlight-box {
       background: linear-gradient(135deg, #0f172a 0%, #1e293b 100%);
-      border-radius: var(--radius-lg, 16px);
+      border-radius: 18px;
       padding: 38px 42px;
       color: #ffffff;
       display: flex;
@@ -290,6 +455,7 @@
       align-items: center;
       gap: 32px;
       border: 1px solid rgba(255, 255, 255, 0.1);
+      box-shadow: 0 15px 35px rgba(0, 0, 0, 0.05);
     }
     .consultation-highlight-box .pill-badge {
       display: inline-block;
@@ -305,10 +471,9 @@
       margin-bottom: 10px;
     }
     .consultation-highlight-box h2 {
-      font-family: var(--font-display, 'Space Grotesk', sans-serif);
       font-size: clamp(22px, 2.5vw, 30px);
-      font-weight: 700;
-      margin-bottom: 8px;
+      font-weight: 800;
+      margin: 0 0 8px 0;
     }
     .consultation-highlight-box p {
       color: rgba(255, 255, 255, 0.7);
@@ -355,23 +520,6 @@
       color: #38bdf8;
     }
 
-    /* Section Title */
-    .section-title-wrap {
-      margin-bottom: 36px;
-    }
-    .section-title-wrap h2 {
-      font-family: var(--font-display, 'Space Grotesk', sans-serif);
-      font-size: 28px;
-      font-weight: 700;
-      letter-spacing: -0.01em;
-      margin-top: 8px;
-    }
-    .section-title-wrap p {
-      color: var(--text-muted);
-      font-size: 14px;
-      margin-top: 4px;
-    }
-
     /* Fee Cards Grid */
     .fee-cards-grid {
       display: grid;
@@ -379,14 +527,15 @@
       gap: 26px;
     }
     .fee-card {
-      background: #ffffff;
-      border: 1px solid var(--border-color, #e2e8f0);
-      border-radius: 14px;
+      background: var(--vpdl-surface);
+      border: 1px solid var(--vpdl-border);
+      border-radius: 16px;
       padding: 30px 26px;
       display: flex;
       flex-direction: column;
       position: relative;
       transition: transform 0.3s ease, box-shadow 0.3s ease, border-color 0.3s ease;
+      box-shadow: 0 4px 15px rgba(0, 0, 0, 0.02);
     }
     .fee-card:hover {
       transform: translateY(-5px);
@@ -394,14 +543,14 @@
       border-color: #cbd5e1;
     }
     .highlighted-fee-card {
-      border: 2px solid #0284c7;
-      box-shadow: 0 10px 30px rgba(2, 132, 199, 0.08);
+      border: 2px solid var(--vpdl-blue);
+      box-shadow: 0 10px 30px rgba(79, 131, 183, 0.1);
     }
     .highlight-corner-badge {
       position: absolute;
       top: -12px;
       right: 22px;
-      background: #0284c7;
+      background: var(--vpdl-blue);
       color: #ffffff;
       font-size: 10px;
       font-weight: 800;
@@ -411,31 +560,34 @@
       border-radius: 999px;
     }
     .discipline-tag {
-      font-family: var(--font-display, sans-serif);
       font-size: 11px;
       font-weight: 700;
-      color: #0284c7;
       text-transform: uppercase;
       letter-spacing: 0.05em;
+      display: inline-block;
+      margin-bottom: 4px;
     }
+    .tag-red { color: var(--vpdl-red); }
+    .tag-blue { color: var(--vpdl-blue); }
+    .tag-purple { color: var(--vpdl-purple); }
+
     .fee-card h3 {
-      font-family: var(--font-display, sans-serif);
       font-size: 19px;
-      font-weight: 700;
-      margin: 8px 0 6px;
-      color: var(--text-dark, #0f172a);
+      font-weight: 800;
+      margin: 4px 0 6px;
+      color: var(--vpdl-black);
     }
     .fee-card-top p {
       font-size: 13px;
-      color: var(--text-muted, #64748b);
+      color: var(--vpdl-muted);
       line-height: 1.5;
       margin-bottom: 20px;
     }
     .fee-price-block {
-      background: #f8fafc;
+      background: var(--vpdl-bg-canvas);
       padding: 16px 18px;
       border-radius: 10px;
-      border: 1px solid #e2e8f0;
+      border: 1px solid var(--vpdl-border);
       margin-bottom: 22px;
       display: flex;
       flex-direction: column;
@@ -445,18 +597,17 @@
       font-size: 11px;
       text-transform: uppercase;
       font-weight: 700;
-      color: var(--text-muted);
+      color: var(--vpdl-muted);
     }
     .fee-price-block .price-amount {
-      font-family: var(--font-display, sans-serif);
       font-size: 30px;
       font-weight: 800;
-      color: var(--text-dark, #0f172a);
+      color: var(--vpdl-black);
       line-height: 1.1;
     }
     .fee-price-block .vat-text {
       font-size: 11px;
-      color: var(--text-muted);
+      color: var(--vpdl-muted);
     }
     .fee-features {
       list-style: none;
@@ -469,7 +620,7 @@
     }
     .fee-features li {
       font-size: 13px;
-      color: var(--text-dark, #334155);
+      color: #334155;
       position: relative;
       padding-left: 20px;
       line-height: 1.45;
@@ -478,13 +629,13 @@
       content: "✓";
       position: absolute;
       left: 0;
-      color: #0284c7;
+      color: var(--vpdl-red);
       font-weight: 800;
     }
     .fee-action-link {
       font-size: 13px;
       font-weight: 700;
-      color: #0284c7;
+      color: var(--vpdl-blue);
       text-decoration: none;
       display: inline-flex;
       align-items: center;
@@ -492,32 +643,34 @@
       transition: color 0.15s ease;
     }
     .fee-action-link:hover {
-      color: #0369a1;
+      color: var(--vpdl-black);
       text-decoration: underline;
     }
 
     /* Partner Revenue Box */
     .partner-revenue-box {
-      background: #f8fafc;
-      border: 1px solid #e2e8f0;
-      border-radius: var(--radius-lg, 16px);
+      background: var(--vpdl-surface);
+      border: 1px solid var(--vpdl-border);
+      border-radius: 18px;
       padding: 38px 44px;
       display: flex;
       justify-content: space-between;
       align-items: center;
       gap: 36px;
+      box-shadow: 0 10px 30px rgba(0, 0, 0, 0.03);
     }
     .partner-box-content h2 {
-      font-family: var(--font-display, sans-serif);
       font-size: 26px;
-      font-weight: 700;
+      font-weight: 800;
       margin: 12px 0 8px;
+      color: var(--vpdl-black);
     }
     .partner-box-content p {
-      color: var(--text-muted);
+      color: var(--vpdl-muted);
       font-size: 14px;
       line-height: 1.6;
       max-width: 620px;
+      margin: 0;
     }
     .partner-metrics {
       display: flex;
@@ -526,14 +679,38 @@
     }
     .partner-metrics strong {
       display: block;
-      font-family: var(--font-display, sans-serif);
       font-size: 20px;
       font-weight: 800;
       color: #d97706;
     }
     .partner-metrics span {
       font-size: 11.5px;
-      color: var(--text-muted);
+      color: var(--vpdl-muted);
+    }
+
+    /* Brand Submit Button */
+    .btn-brand-submit {
+      background: var(--vpdl-black) !important;
+      color: #ffffff !important;
+      border: 1px solid var(--vpdl-black) !important;
+      border-radius: 8px;
+      padding: 13px 22px;
+      font-size: 14px;
+      font-weight: 700;
+      cursor: pointer;
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      gap: 8px;
+      text-decoration: none;
+      transition: all 0.2s ease;
+      box-shadow: 0 4px 15px rgba(17, 24, 39, 0.15);
+    }
+    .btn-brand-submit:hover {
+      background: var(--vpdl-red) !important;
+      border-color: var(--vpdl-red) !important;
+      transform: translateY(-1px);
+      box-shadow: 0 6px 20px rgba(225, 29, 42, 0.3);
     }
 
     /* FAQ List */
@@ -543,21 +720,21 @@
       max-width: 860px;
     }
     .faq-item {
-      background: #ffffff;
-      border: 1px solid #e2e8f0;
+      background: var(--vpdl-surface);
+      border: 1px solid var(--vpdl-border);
       border-radius: 10px;
       padding: 16px 20px;
       cursor: pointer;
       transition: border-color 0.2s ease;
+      box-shadow: 0 2px 8px rgba(0, 0, 0, 0.02);
     }
     .faq-item[open] {
-      border-color: #cbd5e1;
+      border-color: var(--vpdl-purple);
     }
     .faq-item summary {
-      font-family: var(--font-display, sans-serif);
       font-size: 15px;
       font-weight: 700;
-      color: var(--text-dark);
+      color: var(--vpdl-black);
       list-style: none;
       display: flex;
       justify-content: space-between;
@@ -569,7 +746,7 @@
     .faq-item summary::after {
       content: "+";
       font-size: 18px;
-      color: #0284c7;
+      color: var(--vpdl-red);
       font-weight: 700;
     }
     .faq-item[open] summary::after {
@@ -582,7 +759,7 @@
     }
     .faq-content p {
       font-size: 13.5px;
-      color: var(--text-muted);
+      color: var(--vpdl-muted);
       line-height: 1.6;
       margin: 0;
     }

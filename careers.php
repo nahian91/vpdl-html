@@ -1,305 +1,423 @@
-<?php include ('header.php'); ?>
+<?php
+/**
+ * Template Name: Careers & Practice Opportunities
+ * Description: Recruitment hub and practice opportunities portal for VPDL.
+ *
+ * @package VPDL
+ */
+
+// Page SEO Metadata Variables
+$page_title = "Careers & Practice Opportunities | Volume Planning & Developments Ltd";
+$page_desc  = "Join our integrated multidisciplinary practice. Current openings for chartered structural engineers, town planning consultants, architectural visualisers, and project managers across Wales, Bristol, and London.";
+include ('header.php');
+?>
+
+  <!-- Schema.org JSON-LD Structured Data: Breadcrumbs + JobPosting Graph -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@graph": [
+      {
+        "@type": "BreadcrumbList",
+        "@id": "https://vpdl.co.uk/careers.php#breadcrumb",
+        "itemListElement": [
+          { "@type": "ListItem", "position": 1, "name": "Home", "item": "https://vpdl.co.uk/index.php" },
+          { "@type": "ListItem", "position": 2, "name": "Careers & Practice Opportunities", "item": "https://vpdl.co.uk/careers.php" }
+        ]
+      },
+      {
+        "@type": "JobPosting",
+        "title": "Senior / Chartered Structural Design Engineer",
+        "description": "Lead structural Eurocode calculations, steel connection schedules, and foundation engineering for residential extensions and multi-storey builds across the South West and Wales.",
+        "identifier": { "@type": "PropertyValue", "name": "VPDL", "value": "SDM-2026-01" },
+        "datePosted": "2026-01-15",
+        "employmentType": "FULL_TIME",
+        "hiringOrganization": {
+          "@type": "Organization",
+          "name": "Volume Planning & Developments Ltd",
+          "sameAs": "https://vpdl.co.uk"
+        },
+        "jobLocation": {
+          "@type": "Place",
+          "address": {
+            "@type": "PostalAddress",
+            "addressLocality": "Newport / Bristol Hub",
+            "addressRegion": "South Wales & South West",
+            "addressCountry": "GB"
+          }
+        }
+      }
+    ]
+  }
+  </script>
 
   <!-- =========================================================
        CAREERS & OPPORTUNITIES - VOLUME PLANNING & DEVELOPMENTS LTD
        ========================================================= -->
-  <main>
-    <!-- Glassmorphic Breadcrumb Trail -->
-    <div class="breadcrumb-section">
-      <div class="container">
-        <nav class="breadcrumb-glass" aria-label="Breadcrumb">
-          <a href="index.php">
-            <svg viewBox="0 0 24 24" width="14" height="14" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M3 9l9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"></path><polyline points="9 22 9 12 15 12 15 22"></polyline></svg>
-            Home
-          </a>
-          <span class="separator" aria-hidden="true">/</span>
-          <span class="current" aria-current="page">Careers &amp; Opportunities</span>
-        </nav>
+  <main class="careers-page-wrapper">
+
+    <!-- Top Light Backdrop: Brand Gradient Tint + Architectural Grid -->
+    <div class="careers-top-backdrop">
+      <!-- Centered Glassmorphic Breadcrumb Trail -->
+      <div class="breadcrumb-section">
+        <div class="container breadcrumb-container">
+          <nav class="breadcrumb-glass" aria-label="Breadcrumb">
+            <a href="index.php">
+              <svg viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                <path d="M3 9l9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"></path>
+                <polyline points="9 22 9 12 15 12 15 22"></polyline>
+              </svg>
+              Home
+            </a>
+            <span class="separator" aria-hidden="true">/</span>
+            <span class="current" aria-current="page">Careers &amp; Opportunities</span>
+          </nav>
+        </div>
       </div>
+
+      <!-- Centered Careers Hero Section -->
+      <section class="careers-hero centered-hero">
+        <div class="container hero-container" data-reveal>
+          <h1>BUILD YOUR CAREER WITH <span class="highlight-brand">VPDL.</span></h1>
+          <p class="careers-hero-lead">
+            Volume Planning and Developments Limited (VPDL) brings together chartered engineers, planning consultants, architectural designers, technicians, and project managers under one accountable roof. Operating across Wales, South West England (Newport/Bristol), Northern England, and international development hubs, we are expanding our multidisciplinary team to meet growing UK property and construction demands.
+          </p>
+        </div>
+      </section>
     </div>
 
-    <!-- Careers Hero Section -->
-    <section class="careers-hero">
-      <div class="container" data-reveal>
-        <div class="mono-tag">Join Our Multidisciplinary Practice</div>
-        <h1>BUILD YOUR CAREER WITH <span>VPDL.</span></h1>
-        <p class="careers-hero-lead">
-          Volume Planning and Developments Limited (VPDL) brings together chartered engineers, planning officers, architectural designers, technicians, and project managers under one roof[cite: 5]. Operating across Wales, South West England (Newport/Bristol), Northern England, and international hubs[cite: 6, 8], we are expanding our multidisciplinary team to meet growing UK property and development demands[cite: 6, 7].
-        </p>
-      </div>
-    </section>
-
-    <!-- Why Work at VPDL Metric Highlights -->
-    <section class="container" style="padding-bottom: 50px;">
+    <!-- Why Work at VPDL Culture Matrix -->
+    <section class="container" style="padding-top: 50px; padding-bottom: 50px;">
       <div class="careers-culture-banner" data-reveal>
         <div class="culture-card">
           <div class="culture-icon badge-red">
-            <svg viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 2L2 7l10 5 10-5-10-5zM2 17l10 5 10-5M2 12l10 5 10-5"></path></svg>
+            <svg viewBox="0 0 24 24" width="22" height="22" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 2L2 7l10 5 10-5-10-5zM2 17l10 5 10-5M2 12l10 5 10-5"></path></svg>
           </div>
           <div>
-            <h3>360-Degree Integration</h3>
-            <p>Collaborate across architectural concept design, structural engineering calculations, and on-site building works without discipline silos[cite: 8, 11].</p>
+            <h3>360° Multidisciplinary Practice</h3>
+            <p>Collaborate across architectural concept design, structural Eurocode calculations, party wall surveying, and on-site building works without discipline silos.</p>
           </div>
         </div>
 
         <div class="culture-card">
           <div class="culture-icon badge-purple">
-            <svg viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="10"></circle><path d="M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z"></path></svg>
+            <svg viewBox="0 0 24 24" width="22" height="22" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="10"></circle><path d="M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z"></path></svg>
           </div>
           <div>
-            <h3>Regional &amp; Global Projects</h3>
-            <p>Gain exposure to UK residential conversions and multi-unit schemes as well as cross-border commercial and industrial developments[cite: 2, 3, 6].</p>
+            <h3>Regional Hubs &amp; Global Scope</h3>
+            <p>Gain direct exposure to high-yield residential conversions, Class MA repurposing schemes, and cross-border commercial and industrial development schemes.</p>
           </div>
         </div>
 
         <div class="culture-card">
           <div class="culture-icon badge-blue">
-            <svg viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="2" y="3" width="20" height="14" rx="2" ry="2"></rect><line x1="8" y1="21" x2="16" y2="21"></line><line x1="12" y1="17" x2="12" y2="21"></line></svg>
+            <svg viewBox="0 0 24 24" width="22" height="22" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="2" y="3" width="20" height="14" rx="2" ry="2"></rect><line x1="8" y1="21" x2="16" y2="21"></line><line x1="12" y1="17" x2="12" y2="21"></line></svg>
           </div>
           <div>
-            <h3>BIM &amp; Cloud Systems</h3>
-            <p>Work with modern Building Information Modeling (BIM), drone technologies, and secure cloud infrastructure overseen by in-house IT leadership[cite: 11, 14, 15].</p>
+            <h3>BIM &amp; Enterprise Cloud Platforms</h3>
+            <p>Design using advanced Building Information Modeling (BIM), laser point-cloud surveys, and secure cloud management systems guided by in-house IT leadership.</p>
           </div>
         </div>
       </div>
     </section>
 
     <!-- Open Positions Grid -->
-    <section class="container" style="padding-bottom: 70px;">
-      <div class="section-title-wrap" data-reveal>
-        <div class="mono-tag">Current Vacancies</div>
-        <h2>EXPLORE CURRENT OPPORTUNITIES</h2>
-        <p>We are actively seeking talented individuals across engineering, planning, project delivery, and operations.</p>
+    <section class="container" style="padding-bottom: 90px;">
+      <div class="section-title-wrap" data-reveal style="margin-bottom: 30px;">
+        <h2 style="font-size: 28px; font-weight: 800; color: var(--vpdl-black); margin: 0 0 8px;">EXPLORE OPEN POSITIONS</h2>
+        <p style="color: var(--vpdl-muted); font-size: 14.5px; margin: 0;">We are welcoming applications across structural design, statutory town planning, 3D architectural delivery, and site project management.</p>
       </div>
 
       <div class="positions-list" data-reveal>
         
         <!-- Role 01: Structural Engineer -->
-        <article class="position-card">
+        <article class="position-card" id="role-structural">
           <div class="pos-header">
             <div>
-              <span class="discipline-tag">Structural Engineering (SDM)</span>
+              <div class="pos-top-badge-row">
+                <span class="discipline-tag tag-blue">Structural Engineering (SDM)</span>
+                <span class="status-live-tag">Active Recruitment</span>
+              </div>
               <h3>Senior / Chartered Structural Design Engineer</h3>
               <div class="pos-meta">
                 <span>📍 Newport / Bristol Hub &middot; Hybrid</span>
-                <span>⏱ Full-Time</span>
-                <span>💼 Minimum 5+ Years UK Experience</span>
+                <span>⏱ Full-Time (Permanent)</span>
+                <span>💼 5+ Years UK Practice</span>
+                <span>💷 £45,000 – £58,000 + Benefits</span>
               </div>
             </div>
-            <a href="#applySection" class="btn-core btn-core-dark">
-              <span>Apply Now</span>
-              <i aria-hidden="true">↗</i>
+            <a href="career-single.php" class="btn-brand-submit" style="padding: 10px 20px; font-size: 13.5px;">
+              <span>Enquire to Apply</span>
+              <svg viewBox="0 0 24 24" width="15" height="15" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><line x1="7" y1="17" x2="17" y2="7"></line><polyline points="7 7 17 7 17 17"></polyline></svg>
             </a>
           </div>
           <p class="pos-desc">
-            Lead structural calculations and detail designs for residential house extensions, steel framework knockouts, reinforced concrete foundations, and multi-storey builds up to RIBA Stage 4[cite: 2, 9, 10]. Direct collaboration with our lead consultant team (25+ years experience)[cite: 9, 15].
+            Lead structural engineering calculations and detail drafting for residential house extensions, steel frame knockouts (RSJ/box frames), reinforced concrete foundations, and multi-storey commercial conversions up to RIBA Stage 4. You will work alongside our founder and lead structural consultant (25+ years experience) to interface directly with local authority Building Control and private approved inspectors.
           </p>
           <div class="pos-tags">
-            <span>Steel &amp; Concrete Design</span>
+            <span>Steel (BS EN 1993)</span>
+            <span>Concrete &amp; Raft Foundations</span>
             <span>Building Control Sign-Off</span>
-            <span>AutoCAD / MasterSeries</span>
+            <span>MasterSeries / Tedds</span>
             <span>RIBA Stages 1–4</span>
           </div>
         </article>
 
         <!-- Role 02: Planning Consultant & PDM Coordinator -->
-        <article class="position-card">
+        <article class="position-card" id="role-planning">
           <div class="pos-header">
             <div>
-              <span class="discipline-tag">Planning Design Management (PDM)</span>
-              <h3>Planning Consultant &amp; Development Coordinator</h3>
+              <div class="pos-top-badge-row">
+                <span class="discipline-tag tag-red">Planning Design Management (PDM)</span>
+                <span class="status-live-tag">Active Recruitment</span>
+              </div>
+              <h3>Chartered Town Planning Consultant &amp; PDM Lead</h3>
               <div class="pos-meta">
-                <span>📍 London / Remote (UK Coverage)</span>
+                <span>📍 London / Newport Studio &middot; Hybrid</span>
                 <span>⏱ Full-Time</span>
-                <span>💼 3+ Years Planning Practice</span>
+                <span>💼 3+ Years Planning Consultancy</span>
+                <span>💷 £38,000 – £48,000 + Bonus</span>
               </div>
             </div>
-            <a href="#applySection" class="btn-core btn-core-dark">
-              <span>Apply Now</span>
-              <i aria-hidden="true">↗</i>
+            <a href="career-single.php" class="btn-brand-submit" style="padding: 10px 20px; font-size: 13.5px;">
+              <span>Enquire to Apply</span>
+              <svg viewBox="0 0 24 24" width="15" height="15" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><line x1="7" y1="17" x2="17" y2="7"></line><polyline points="7 7 17 7 17 17"></polyline></svg>
             </a>
           </div>
           <p class="pos-desc">
-            Manage planning applications, lawful development certificates, Permitted Development assessments, and liaison with local council planning officers across London, Wales, and Northern England[cite: 5, 6, 8].
+            Lead statutory planning appraisals, Design &amp; Access Statements (DAS), Class MA prior approval submissions, and lawful development certificates. You will negotiate directly with local planning officers across Newport, Bristol, Cardiff, London, and Northern England to de-risk investment assets and unlock development potential.
           </p>
           <div class="pos-tags">
-            <span>Planning Portal Submissions</span>
-            <span>Permitted Development Rights</span>
+            <span>Town Planning Appeals</span>
+            <span>Permitted Development (GPDO 2015)</span>
             <span>Class MA Conversions</span>
-            <span>Council Liaison</span>
+            <span>Section 106 Negotiations</span>
+            <span>LPA Officer Liaison</span>
           </div>
         </article>
 
         <!-- Role 03: Architectural Designer & 3D Visualiser -->
-        <article class="position-card">
+        <article class="position-card" id="role-architecture">
           <div class="pos-header">
             <div>
-              <span class="discipline-tag">Architectural Design</span>
-              <h3>Architectural Designer &amp; 3D Visualiser</h3>
+              <div class="pos-top-badge-row">
+                <span class="discipline-tag tag-purple">Architectural Design (ARC)</span>
+                <span class="status-live-tag">Active Recruitment</span>
+              </div>
+              <h3>Architectural Designer &amp; 3D Visualisation Specialist</h3>
               <div class="pos-meta">
-                <span>📍 London / Newport Studio</span>
+                <span>📍 London / South Wales Studio</span>
                 <span>⏱ Full-Time</span>
-                <span>💼 2+ Years Technical Design</span>
+                <span>💼 2+ Years Technical Architecture</span>
+                <span>💷 £32,000 – £42,000</span>
               </div>
             </div>
-            <a href="#applySection" class="btn-core btn-core-dark">
-              <span>Apply Now</span>
-              <i aria-hidden="true">↗</i>
+            <a href="career-single.php" class="btn-brand-submit" style="padding: 10px 20px; font-size: 13.5px;">
+              <span>Enquire to Apply</span>
+              <svg viewBox="0 0 24 24" width="15" height="15" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><line x1="7" y1="17" x2="17" y2="7"></line><polyline points="7 7 17 7 17 17"></polyline></svg>
             </a>
           </div>
           <p class="pos-desc">
-            Create high-end 3D visual concept models, extension layouts, office fit-out spatial plans, and technical construction drawings ready for local authority Building Control review[cite: 2, 9, 10].
+            Develop 1:50 general arrangement plans, contextual elevations, high-resolution photorealistic 3D renders, and technical Building Regulations drawing packs. You will collaborate directly with our structural engineering team to ensure aesthetic designs align with structural load paths and building fabric constraints.
           </p>
           <div class="pos-tags">
-            <span>3D Visual Modeling</span>
-            <span>Revit / SketchUp</span>
-            <span>Commercial Fit-Outs</span>
-            <span>Residential Schemes</span>
+            <span>3D Concept Modeling</span>
+            <span>Revit / AutoCAD / SketchUp</span>
+            <span>1:20 Technical Junctions</span>
+            <span>Approved Document L &amp; B</span>
+            <span>Residential &amp; Commercial</span>
           </div>
         </article>
 
         <!-- Role 04: Project Management & Surveyor (PMC/BSM) -->
-        <article class="position-card">
+        <article class="position-card" id="role-management">
           <div class="pos-header">
             <div>
-              <span class="discipline-tag">Project &amp; Property Management (PMC/IPM)</span>
-              <h3>Project Management &amp; Surveying Officer (PMC/BSM)</h3>
+              <div class="pos-top-badge-row">
+                <span class="discipline-tag tag-blue">Project Management &amp; Surveying (PMC/BSM)</span>
+                <span class="status-live-tag">Active Recruitment</span>
+              </div>
+              <h3>Project Management &amp; Party Wall Surveying Officer</h3>
               <div class="pos-meta">
-                <span>📍 Regional UK / South West</span>
-                <span>⏱ Full-Time / Contract</span>
+                <span>📍 Regional UK / South West &middot; Site &amp; Office</span>
+                <span>⏱ Full-Time</span>
                 <span>💼 4+ Years Site &amp; Surveying Exp</span>
+                <span>💷 £42,000 – £52,000 + Travel</span>
               </div>
             </div>
-            <a href="#applySection" class="btn-core btn-core-dark">
-              <span>Apply Now</span>
-              <i aria-hidden="true">↗</i>
+            <a href="career-single.php" class="btn-brand-submit" style="padding: 10px 20px; font-size: 13.5px;">
+              <span>Enquire to Apply</span>
+              <svg viewBox="0 0 24 24" width="15" height="15" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><line x1="7" y1="17" x2="17" y2="7"></line><polyline points="7 7 17 7 17 17"></polyline></svg>
             </a>
           </div>
           <p class="pos-desc">
-            Oversee contractor administration, JCT contract coordination, Party Wall Act schedules of condition, and staged site inspections to ensure smooth project delivery from conception to handover[cite: 1, 10, 15].
+            Administer JCT minor works and intermediate building contracts, oversee on-site quality verification milestones, manage contractor vetting, and draft statutory Party Wall Act 1996 notices and Schedules of Condition across commercial and residential sites.
           </p>
           <div class="pos-tags">
-            <span>JCT Administration</span>
-            <span>Party Wall Act 1996</span>
-            <span>Condition Surveys</span>
-            <span>Site Oversight</span>
+            <span>JCT Contract Administration</span>
+            <span>Party Wall Act 1996 Awards</span>
+            <span>Photographic Schedules</span>
+            <span>Site Milestone Sign-Off</span>
+            <span>Contractor Vetting</span>
           </div>
         </article>
 
       </div>
     </section>
 
-    <!-- Application Form Section -->
-    <section class="container" id="applySection" style="padding-bottom: 100px;">
-      <div class="application-layout" data-reveal>
-        <div class="app-info-panel">
-          <div class="mono-tag" style="background: rgba(255,255,255,0.08); color: #FFF; border-color: rgba(255,255,255,0.2);">People &amp; Culture</div>
-          <h2>SUBMIT YOUR CANDIDACY</h2>
-          <p style="color: rgba(255,255,255,0.7); font-size: 14px; line-height: 1.7; margin: 14px 0 24px;">
-            Directed by Kaniz Fatema, our HR and talent management team focuses on equal opportunities, diversity &amp; inclusion, and professional growth[cite: 15]. Even if a role matching your exact profile isn't open today, we welcome speculative CV submissions from talented property professionals.
-          </p>
-          <div class="app-contact-touchpoint">
-            <svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="#38bdf8" stroke-width="2" aria-hidden="true"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"></path><polyline points="22,6 12,13 2,6"></polyline></svg>
-            <div>
-              <strong style="display: block; font-size: 11px; text-transform: uppercase; color: rgba(255,255,255,0.5);">Direct CV Submissions</strong>
-              <a href="mailto:vpdl.uk@gmail.com" style="color: #38bdf8; text-decoration: none; font-size: 14px; font-weight: 700;">vpdl.uk@gmail.com[cite: 15]</a>
-            </div>
-          </div>
-        </div>
-
-        <div class="app-form-panel">
-          <h3 style="margin-bottom: 6px; font-size: 20px;">Direct Career Inquiry</h3>
-          <p style="color: var(--text-muted); font-size: 13px; margin-bottom: 22px;">Attach details of your experience, discipline, and portfolio link.</p>
-
-          <form id="careerApplicationForm" novalidate autocomplete="on">
-            <div class="form-grid">
-              <div>
-                <label class="form-label" for="applicantName">Full Name *</label>
-                <input class="form-control" type="text" id="applicantName" name="applicantName" required placeholder="e.g. Rachel Jenkins">
-              </div>
-
-              <div>
-                <label class="form-label" for="applicantEmail">Email Address *</label>
-                <input class="form-control" type="email" id="applicantEmail" name="applicantEmail" required placeholder="rachel@example.com">
-              </div>
-
-              <div>
-                <label class="form-label" for="applicantPhone">Telephone Number *</label>
-                <input class="form-control" type="tel" id="applicantPhone" name="applicantPhone" required placeholder="+44 7911 123456">
-              </div>
-
-              <div>
-                <label class="form-label" for="targetRole">Target Discipline / Role *</label>
-                <select class="form-control" id="targetRole" name="targetRole">
-                  <option value="Structural Engineer (SDM)">Structural Design Engineering (SDM)</option>
-                  <option value="Planning Consultant (PDM)">Planning Design Management (PDM)</option>
-                  <option value="Architectural Designer">Architectural Design &amp; 3D Modeling</option>
-                  <option value="Project Manager (PMC)">Project Management Consultancy (PMC/IPM)</option>
-                  <option value="Building Surveyor (BSM)">Building Surveying &amp; Party Wall (BSM)</option>
-                  <option value="Speculative Submission">Other / Speculative Technical Application</option>
-                </select>
-              </div>
-
-              <div class="form-group-full">
-                <label class="form-label" for="portfolioUrl">Portfolio or LinkedIn Profile Link</label>
-                <input class="form-control" type="url" id="portfolioUrl" name="portfolioUrl" placeholder="https://linkedin.com/in/yourprofile or portfolio site">
-              </div>
-
-              <div class="form-group-full">
-                <label class="form-label" for="coverNote">Summary of Experience &amp; Notice Period *</label>
-                <textarea class="form-control" id="coverNote" name="coverNote" required placeholder="Please outline your key software proficiencies, qualifications (e.g. ICE, IStructE, RTPI, RICS), current location, and availability..."></textarea>
-              </div>
-
-              <div class="form-group-full" style="margin-top: 10px;">
-                <button type="submit" id="careerSubmitBtn" class="btn-core btn-core-dark" style="width: 100%;">
-                  <span id="careerBtnText">Submit Application Details</span>
-                  <svg id="careerBtnIcon" viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
-                    <line x1="7" y1="17" x2="17" y2="7"></line>
-                    <polyline points="7 7 17 7 17 17"></polyline>
-                  </svg>
-                </button>
-              </div>
-            </div>
-
-            <div id="careerStatusBox" class="form-status" style="display: none; margin-top: 16px;"></div>
-          </form>
-        </div>
-      </div>
-    </section>
   </main>
 
-  <!-- Component Styles -->
+  <!-- Component Styles Aligned with VPDL Brand Palette -->
   <style>
-    .careers-hero {
-      padding: 60px 0 40px;
-    }
-    .careers-hero-lead {
-      color: var(--text-muted);
-      font-size: 16px;
-      max-width: 680px;
-      margin-top: 14px;
-      line-height: 1.7;
+    :root {
+      --vpdl-red: #E11D2A;         /* 'V' & Center Roofline Accent */
+      --vpdl-purple: #E11D2A;      /* Main Arch Roofline */
+      --vpdl-blue: #4F83B7;        /* Outer Accent Roofline */
+      --vpdl-black: #111827;       /* Core 'PDL' Typography */
+      --vpdl-muted: #64748B;
+      --vpdl-border: #E2E8F0;
+      --vpdl-surface: #FFFFFF;
+      --vpdl-bg-canvas: #F8FAFC;
     }
 
-    /* Culture Banner */
+    .careers-page-wrapper {
+      background: var(--vpdl-bg-canvas);
+      color: var(--vpdl-black);
+      position: relative;
+      overflow-x: hidden;
+    }
+
+    /* Top Light Backdrop */
+    .careers-top-backdrop {
+      position: relative;
+      padding-top: 28px;
+      padding-bottom: 40px;
+      background: 
+        radial-gradient(circle at 45% -10%, rgba(225, 29, 42, 0.08) 0%, transparent 50%),
+        radial-gradient(circle at 75% 20%, rgba(107, 91, 149, 0.08) 0%, transparent 45%),
+        linear-gradient(to bottom, #ffffff 0%, #f8fafc 100%);
+      border-bottom: 1px solid var(--vpdl-border);
+    }
+
+    .careers-top-backdrop::before {
+      content: "";
+      position: absolute;
+      inset: 0;
+      background-image: 
+        linear-gradient(rgba(17, 24, 39, 0.035) 1px, transparent 1px),
+        linear-gradient(90deg, rgba(17, 24, 39, 0.035) 1px, transparent 1px);
+      background-size: 34px 34px;
+      mask-image: radial-gradient(ellipse at 50% 30%, black 40%, transparent 80%);
+      -webkit-mask-image: radial-gradient(ellipse at 50% 30%, black 40%, transparent 80%);
+      pointer-events: none;
+    }
+
+    /* Centered Breadcrumbs */
+    .breadcrumb-container {
+      display: flex;
+      justify-content: center;
+      position: relative;
+      z-index: 2;
+    }
+    .breadcrumb-glass {
+      background: rgba(255, 255, 255, 0.88) !important;
+      backdrop-filter: blur(12px) !important;
+      -webkit-backdrop-filter: blur(12px) !important;
+      border: 1px solid rgba(226, 232, 240, 0.9) !important;
+      box-shadow: 0 4px 15px rgba(0, 0, 0, 0.03) !important;
+      border-radius: 9999px;
+      padding: 8px 20px;
+      display: inline-flex;
+      align-items: center;
+      gap: 10px;
+      font-size: 13px;
+    }
+    .breadcrumb-glass a {
+      color: var(--vpdl-muted);
+      text-decoration: none;
+      display: inline-flex;
+      align-items: center;
+      gap: 6px;
+      transition: color 0.15s ease;
+      font-weight: 500;
+    }
+    .breadcrumb-glass a:hover {
+      color: var(--vpdl-red);
+    }
+    .breadcrumb-glass .separator {
+      color: #cbd5e1;
+    }
+    .breadcrumb-glass .current {
+      color: var(--vpdl-black);
+      font-weight: 700;
+    }
+
+    /* Centered Hero Header */
+    .centered-hero {
+      text-align: center;
+      position: relative;
+      z-index: 2;
+      padding: 34px 0 10px;
+    }
+    .hero-container {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      text-align: center;
+    }
+    .mono-tag {
+      margin: 0 auto 16px auto;
+      background: rgba(225, 29, 42, 0.08);
+      border: 1px solid rgba(225, 29, 42, 0.25);
+      color: var(--vpdl-red);
+      font-size: 11px;
+      letter-spacing: 0.12em;
+      text-transform: uppercase;
+      padding: 5px 14px;
+      border-radius: 4px;
+      font-weight: 700;
+      display: inline-block;
+    }
+    .centered-hero h1 {
+      font-size: clamp(32px, 4vw, 46px);
+      font-weight: 800;
+      color: var(--vpdl-black);
+      margin: 0 0 16px 0;
+      letter-spacing: -0.02em;
+      line-height: 1.15;
+    }
+    .centered-hero h1 .highlight-brand {
+      color: var(--vpdl-purple);
+    }
+    .careers-hero-lead {
+      color: var(--vpdl-muted);
+      font-size: 16px;
+      max-width: 680px;
+      margin: 0 auto;
+      line-height: 1.75;
+    }
+
+    /* Culture Matrix Banner */
     .careers-culture-banner {
       display: grid;
       grid-template-columns: repeat(3, 1fr);
       gap: 24px;
     }
     .culture-card {
-      background: #ffffff;
-      border: 1px solid var(--border-color, #e2e8f0);
-      border-radius: var(--radius-lg, 16px);
+      background: var(--vpdl-surface);
+      border: 1px solid var(--vpdl-border);
+      border-radius: 16px;
       padding: 28px 24px;
       display: flex;
       gap: 18px;
       align-items: flex-start;
-      transition: transform 0.3s ease, box-shadow 0.3s ease;
+      transition: transform 0.3s cubic-bezier(0.16, 1, 0.3, 1), box-shadow 0.3s ease, border-color 0.2s ease;
+      box-shadow: 0 4px 15px rgba(0, 0, 0, 0.02);
     }
     .culture-card:hover {
       transform: translateY(-4px);
       box-shadow: 0 14px 30px rgba(0, 0, 0, 0.05);
+      border-color: #cbd5e1;
     }
     .culture-icon {
       width: 44px;
@@ -309,40 +427,41 @@
       place-items: center;
       flex-shrink: 0;
     }
-    .badge-red { background: rgba(237, 28, 36, 0.08); color: #ed1c24; }
-    .badge-purple { background: rgba(103, 87, 162, 0.09); color: #6757a2; }
-    .badge-blue { background: rgba(2, 132, 199, 0.1); color: #0284c7; }
+    .badge-red { background: rgba(225, 29, 42, 0.09); color: var(--vpdl-red); }
+    .badge-purple { background: rgba(107, 91, 149, 0.1); color: var(--vpdl-purple); }
+    .badge-blue { background: rgba(79, 131, 183, 0.12); color: var(--vpdl-blue); }
 
     .culture-card h3 {
-      font-family: var(--font-display, sans-serif);
       font-size: 16px;
-      font-weight: 700;
-      margin-bottom: 6px;
-      color: var(--text-dark, #0f172a);
+      font-weight: 800;
+      margin: 0 0 6px;
+      color: var(--vpdl-black);
     }
     .culture-card p {
       font-size: 13px;
-      color: var(--text-muted, #64748b);
+      color: var(--vpdl-muted);
       line-height: 1.6;
       margin: 0;
     }
 
-    /* Vacancies Grid */
+    /* Positions List & Cards */
     .positions-list {
       display: flex;
       flex-direction: column;
       gap: 20px;
     }
     .position-card {
-      background: #ffffff;
-      border: 1px solid var(--border-color, #e2e8f0);
-      border-radius: 14px;
-      padding: 30px;
-      transition: border-color 0.2s ease, box-shadow 0.2s ease;
+      background: var(--vpdl-surface);
+      border: 1px solid var(--vpdl-border);
+      border-radius: 18px;
+      padding: 32px 34px;
+      transition: transform 0.25s cubic-bezier(0.16, 1, 0.3, 1), border-color 0.2s ease, box-shadow 0.25s ease;
+      box-shadow: 0 4px 15px rgba(0, 0, 0, 0.02);
     }
     .position-card:hover {
+      transform: translateY(-3px);
       border-color: #cbd5e1;
-      box-shadow: 0 10px 25px rgba(0, 0, 0, 0.04);
+      box-shadow: 0 12px 30px rgba(0, 0, 0, 0.04);
     }
     .pos-header {
       display: flex;
@@ -352,34 +471,53 @@
       margin-bottom: 14px;
       flex-wrap: wrap;
     }
+    .pos-top-badge-row {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      margin-bottom: 6px;
+    }
     .discipline-tag {
-      font-family: var(--font-display, sans-serif);
       font-size: 11px;
-      font-weight: 700;
-      color: #0284c7;
+      font-weight: 800;
       text-transform: uppercase;
       letter-spacing: 0.05em;
+      display: inline-block;
     }
-    .position-card h3 {
-      font-family: var(--font-display, sans-serif);
-      font-size: 20px;
+    .tag-blue { color: var(--vpdl-blue); }
+    .tag-red { color: var(--vpdl-red); }
+    .tag-purple { color: var(--vpdl-purple); }
+
+    .status-live-tag {
+      font-size: 10.5px;
       font-weight: 700;
+      background: rgba(16, 185, 129, 0.1);
+      color: #059669;
+      border: 1px solid rgba(16, 185, 129, 0.25);
+      padding: 2px 8px;
+      border-radius: 9999px;
+      letter-spacing: 0.04em;
+    }
+
+    .position-card h3 {
+      font-size: 21px;
+      font-weight: 800;
       margin: 4px 0 8px;
-      color: var(--text-dark, #0f172a);
+      color: var(--vpdl-black);
     }
     .pos-meta {
       display: flex;
-      gap: 16px;
+      gap: 18px;
       font-size: 12.5px;
-      color: var(--text-muted, #64748b);
-      font-weight: 500;
+      color: var(--vpdl-muted);
+      font-weight: 600;
       flex-wrap: wrap;
     }
     .pos-desc {
       font-size: 14px;
-      color: var(--text-dark, #334155);
-      line-height: 1.65;
-      margin-bottom: 18px;
+      color: #334155;
+      line-height: 1.7;
+      margin: 0 0 20px;
     }
     .pos-tags {
       display: flex;
@@ -387,107 +525,54 @@
       flex-wrap: wrap;
     }
     .pos-tags span {
-      background: #f8fafc;
-      border: 1px solid #e2e8f0;
-      padding: 4px 10px;
+      background: var(--vpdl-bg-canvas);
+      border: 1px solid var(--vpdl-border);
+      padding: 5px 12px;
       border-radius: 6px;
-      font-size: 11.5px;
+      font-size: 12px;
       color: #475569;
       font-weight: 600;
     }
 
-    /* Application Section */
-    .application-layout {
-      background: #ffffff;
-      border: 1px solid var(--border-color, #e2e8f0);
-      border-radius: var(--radius-lg, 16px);
-      display: grid;
-      grid-template-columns: 1fr 1.5fr;
-      overflow: hidden;
-    }
-    .app-info-panel {
-      background: #0f172a;
-      color: #ffffff;
-      padding: 44px 38px;
-      display: flex;
-      flex-direction: column;
-      justify-content: space-between;
-    }
-    .app-info-panel h2 {
-      font-family: var(--font-display, sans-serif);
-      font-size: 28px;
+    /* Buttons */
+    .btn-brand-submit {
+      background: var(--vpdl-black) !important;
+      color: #ffffff !important;
+      border: 1px solid var(--vpdl-black) !important;
+      border-radius: 8px;
+      padding: 13px 22px;
+      font-size: 14px;
       font-weight: 700;
-      margin-top: 14px;
-    }
-    .app-contact-touchpoint {
-      display: flex;
+      cursor: pointer;
+      display: inline-flex;
       align-items: center;
-      gap: 14px;
-      background: rgba(255, 255, 255, 0.05);
-      padding: 14px 18px;
-      border-radius: 10px;
-      border: 1px solid rgba(255, 255, 255, 0.1);
+      justify-content: center;
+      gap: 8px;
+      text-decoration: none;
+      transition: all 0.2s cubic-bezier(0.16, 1, 0.3, 1);
+      box-shadow: 0 4px 15px rgba(17, 24, 39, 0.15);
     }
-    .app-form-panel {
-      padding: 44px 38px;
+    .btn-brand-submit:hover {
+      background: var(--vpdl-red) !important;
+      border-color: var(--vpdl-red) !important;
+      transform: translateY(-2px);
+      box-shadow: 0 6px 20px rgba(225, 29, 42, 0.3);
     }
 
     @media (max-width: 960px) {
       .careers-culture-banner {
         grid-template-columns: 1fr;
       }
-      .application-layout {
-        grid-template-columns: 1fr;
+    }
+    @media (max-width: 640px) {
+      .pos-header {
+        flex-direction: column;
+        align-items: flex-start;
       }
-      .app-info-panel {
-        padding: 32px 24px;
-      }
-      .app-form-panel {
-        padding: 32px 24px;
+      .btn-brand-submit {
+        width: 100%;
       }
     }
   </style>
-
-  <!-- Career Application Script -->
-  <script>
-  document.getElementById('careerApplicationForm').addEventListener('submit', function(e) {
-    e.preventDefault();
-    
-    var name = document.getElementById('applicantName').value.trim();
-    var email = document.getElementById('applicantEmail').value.trim();
-    var phone = document.getElementById('applicantPhone').value.trim();
-    var note = document.getElementById('coverNote').value.trim();
-    var statusBox = document.getElementById('careerStatusBox');
-    var submitBtn = document.getElementById('careerSubmitBtn');
-    var btnText = document.getElementById('careerBtnText');
-    var btnIcon = document.getElementById('careerBtnIcon');
-
-    if (!name || !email || !phone || !note) {
-      statusBox.style.display = 'block';
-      statusBox.style.background = 'rgba(237, 28, 36, 0.1)';
-      statusBox.style.border = '1px solid #ed1c24';
-      statusBox.style.color = '#ed1c24';
-      statusBox.innerText = 'Please populate all mandatory fields before submitting.';
-      return;
-    }
-
-    submitBtn.disabled = true;
-    btnText.innerText = 'Transmitting Candidate Profile...';
-    btnIcon.style.display = 'none';
-
-    setTimeout(function() {
-      statusBox.style.display = 'block';
-      statusBox.style.background = 'rgba(16, 185, 129, 0.1)';
-      statusBox.style.border = '1px solid #10b981';
-      statusBox.style.color = '#065f46';
-      statusBox.innerText = 'Thank you. Your candidate profile has been registered with our talent desk. We will contact you if your qualifications align with current practice requirements.';
-      
-      document.getElementById('careerApplicationForm').reset();
-      submitBtn.disabled = false;
-      btnText.innerText = 'Submit Application Details';
-      btnIcon.style.display = 'inline-block';
-    }, 1000);
-  });
-  </script>
 
 <?php include ('footer.php'); ?>
